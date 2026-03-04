@@ -1,7 +1,6 @@
 
 # A projektet készítették:
-- Név1
-- Név2
+-Tóth Zsolt Zétény
 
 # Következő API-kat használtuk:
 - Api1
