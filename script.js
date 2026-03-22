@@ -63,5 +63,54 @@ function displayMeals(meals) {
     }
 }
 
+function showDetails(meal){
+    document.getElementById("modal").classList.remove("hidden");
+
+    document.getElementById("modalTitle").innerText = meal.strMeal;
+    document.getElementById("modalImg").src = meal.strMealThumb;
+
+    document.getElementById("modalDesc").innerText = meal.strInstructions;
+
+    document.getElementById("modalIngredients").innerHTML = getIngredients(meal);
+
+    const videoContainer = document.getElementById("modalVideo");
+
+    if (meal.strYoutube) {
+        const videoId = meal.strYoutube.split("v=")[1];
+        videoContainer.innerHTML = `<iframe width="100%" height="250"src="https://www.youtube.com/embed/${videoId}"frameborder="0" allowfullscreen></iframe>`;
+    } 
+    else{
+        videoContainer.innerHTML = "";
+    }
+}
+
+function closeModal() {
+    document.getElementById("modal").classList.add("hidden");
+}
+
+function getIngredients(meal){
+  let ingredientsHTML = "";
+
+  for (let i = 1; i <= 20; i++) {
+      const ingredient = meal[`strIngredient${i}`];
+
+      if (ingredient && ingredient.trim() !== "") {
+        const img = `https://www.themealdb.com/images/ingredients/${ingredient}-Small.png`;
+
+      ingredientsHTML += `
+        <div class="ingredient"><img src="${img}"><p>${ingredient}</p></div>`;
+    }
+  }
+
+  return ingredientsHTML;
+}
+
+
+document.getElementById("searchInput").addEventListener("keypress", function (e){
+    if (e.key === "Enter") {
+        searchMeals();
+    }
+  });
+
 loadRandom();
 
