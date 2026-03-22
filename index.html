@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <h1>🍽️ Food Finder</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search food...">
+    <button onclick="searchMeals()">🔍</button>
+    <button onclick="loadRandom()">🎲 Random</button>
+  </div>
+
+  <div id="mealsContainer"></div>
+
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">❌</span>
+
+      <h2 id="modalTitle"></h2>
+      <img id="modalImg">
+
+      <p id="modalDesc"></p>
+
+      <h3>🧾 Ingredints</h3>
+      <div id="modalIngredients" class="ingredients"></div>
+
+      <div id="modalVideo"></div>
+    </div>
+  </div>
+
+</body>
+</html>

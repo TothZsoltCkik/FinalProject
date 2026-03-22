@@ -1,0 +1,99 @@
+body {
+    font-family: Arial;
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+}
+
+.controls {
+    margin: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: #444;
+    color: white;
+}
+
+#mealsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #2e2e3e;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    margin: 40px auto;
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+}
+
+.ingredients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.ingredient {
+    text-align: center;
+}
+
+.ingredient img {
+    width: 50px;
+}
+
+iframe {
+    margin-top: 10px;
+    border-radius: 10px;
+}
