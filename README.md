@@ -3,5 +3,4 @@
 -Tóth Zsolt Zétény
 
 # Következő API-kat használtuk:
-- Api1
-- Api2
+- TheMealDB
